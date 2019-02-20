@@ -104,7 +104,7 @@ public class CLRRedirectionDemo : MonoBehaviour
         __intp.Free(ptr_of_this_method);
 
         //在真实调用Debug.Log前，我们先获取DLL内的堆栈
-        var stacktrace = __domain.DebugService.GetStackTrance(__intp);
+        var stacktrace = __domain.DebugService.GetStackTrace(__intp);
 
         //我们在输出信息后面加上DLL堆栈
         UnityEngine.Debug.Log(message + "\n" + stacktrace);
